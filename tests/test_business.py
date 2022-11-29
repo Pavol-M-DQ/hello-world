@@ -15,7 +15,7 @@ test_expectations = (
 )
 
 
-@pytest.mark.parametrize('poly,expected', list(zip(test_polynomials,test_expectations)))
+@pytest.mark.parametrize('poly,expected', list(zip(test_polynomials, test_expectations)))
 def test_eval_poly(poly, expected):
     """
     basic test for the polynomial evaluation
