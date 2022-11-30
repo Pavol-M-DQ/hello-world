@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build: # job name is used when setting up branch protections
 
     runs-on: ubuntu-latest
 
