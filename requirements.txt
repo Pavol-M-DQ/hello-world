@@ -1,14 +1,7 @@
-azure-functions
-dateparser~=1.1.1
 pytest~=7.1.2
 jsonpickle
 mock~=4.0.3
 wheel
-geopy~=2.2.0
-redis>=4.2.0rc1
-python-dateutil~=2.8.2
-aioredis<2.0.0
-hiredis<2.0.0
 requests
 pytest-aiohttp
 pytest-asyncio
