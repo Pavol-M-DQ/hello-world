@@ -26,7 +26,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install azure-functions-core-tools-4
         sudo npm install -g azurite
-        azurite -l local_storage/
+        # azurite -l local_storage/
 
     - name: Start redis DB
       run: |
