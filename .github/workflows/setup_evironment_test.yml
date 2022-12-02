@@ -3,6 +3,7 @@
 name: Set up VILSA environment
 
 on:
+#  push:
   workflow_dispatch:    # run this action manually
 
 jobs:
@@ -25,6 +26,7 @@ jobs:
           - 10002:10002
 
     steps:
+#    - uses: actions/checkout@v3 commented out cause there is no code to test yet
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
       with:
@@ -40,3 +42,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install azure-functions-core-tools-4
+
+#    - name: Test with pytest
+#          run: |
+#            pytest tests/integration_tests
