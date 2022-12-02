@@ -8,6 +8,21 @@ on:
 jobs:
   set_up:
     runs-on: ubuntu-20.04
+    
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      redis:
+        # Docker Hub image
+        image: redis
+        ports:
+          - 6379:6379
+      azurite:
+        image: mcr.microsoft.com/azure-storage/azurite
+        ports:
+          - 10000:10000
+          - 10001:10001
+          - 10002:10002
 
     steps:
     - name: Set up Python 3.9
@@ -26,8 +41,3 @@ jobs:
         sudo apt-get update
         sudo apt-get install azure-functions-core-tools-4
         sudo npm install -g azurite
-        # azurite -l local_storage/
-
-    - name: Start redis DB
-      run: |
-        docker run --name vilsa-db -p 6379:6379 redis
