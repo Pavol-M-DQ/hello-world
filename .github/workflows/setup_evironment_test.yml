@@ -1,5 +1,6 @@
-name: Set up VILSA environment
 # this action should set up all the dependencies for VILSA including redis database
+
+name: Set up VILSA environment
 
 on:
   workflow_dispatch:    # run this action manually
